@@ -14,7 +14,8 @@ const SITE = {
   agency: {
     name: "Tiptangle",
     tagline: "Most Affordable · Flexible Packages · You're in Safe Hands",
-    logo: "assets/logo.svg",            // swap with your own logo file
+    logo: "assets/logo.png",            // your logo file (falls back to assets/logo.svg if missing)
+    watermark: true,                    // show the logo badge on every image
     phone: "+91 00000 00000",           // ______ your phone
     whatsapp: "910000000000",           // ______ country code + number, digits only
     email: "hello@yourdomain.com",      // ______ your email

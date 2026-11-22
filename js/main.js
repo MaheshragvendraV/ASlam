@@ -25,7 +25,16 @@
     el.textContent = v;
     if (el.dataset.href) el.href = `${el.dataset.href}:${String(v).replace(/\s/g, "")}`;
   });
-  $$("[data-bind-src]").forEach(el => (el.src = get(el.dataset.bindSrc)));
+  /* logo: use agency.logo, fall back to the bundled SVG; also feeds the image watermark */
+  const setLogo = src => {
+    $$("[data-bind-src]").forEach(el => (el.src = src));
+    document.documentElement.style.setProperty("--logo", `url("${new URL(src, location.href).href}")`);
+  };
+  const logoProbe = new Image();
+  logoProbe.onload = () => setLogo(D.agency.logo);
+  logoProbe.onerror = () => setLogo("assets/logo.svg");
+  logoProbe.src = D.agency.logo;
+  document.body.classList.toggle("watermark", D.agency.watermark !== false);
   $("#year").textContent = new Date().getFullYear();
   $("#mapFrame").src = D.agency.mapEmbed;
   const waLink = (text = "Hi Tiptangle! I'd like to plan a trip.") => `https://wa.me/${D.agency.whatsapp}?text=${encodeURIComponent(text)}`;
