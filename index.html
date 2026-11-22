@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tiptangle | Most Affordable &amp; Flexible Tour Packages</title>
+  <meta name="description" content="Tiptangle — your end-to-end travel partner for domestic, international and overseas tours. Solo, family, friends, bachelor, honeymoon and college/school IV trips. Most affordable, fully flexible, and you're in safe hands.">
+  <meta property="og:title" content="Tiptangle — You're in Safe Hands">
+  <meta property="og:description" content="Most affordable, flexible tour packages with our own vehicles. Domestic, international & overseas.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#f72585">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="#home" class="brand" aria-label="Tiptangle home">
+      <img src="assets/logo.svg" alt="" class="brand__logo" data-bind-src="agency.logo">
+      <span class="brand__name" data-bind="agency.name">Tiptangle</span>
+    </a>
+    <nav class="nav__links" id="navLinks" aria-label="Main">
+      <a href="#places">Destinations</a>
+      <a href="#budget">Packages</a>
+      <a href="#trips">Trip Types</a>
+      <a href="#fleet">Fleet</a>
+      <a href="#journey">Why Us</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#enquire" class="btn btn--primary nav__cta">Plan My Trip</a>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="hero__slides" id="heroSlides" aria-hidden="true"></div>
+  <div class="hero__shade"></div>
+  <div class="container hero__content">
+    <p class="hero__badge"><i class="fa-solid fa-shield-heart"></i> Trusted by happy travellers · You're in safe hands</p>
+    <h1 class="hero__title">Your next story begins at<br><span class="hero__type" id="heroType">Hill Stations</span><span class="caret">|</span></h1>
+    <p class="hero__sub">Domestic, international &amp; overseas tours with our own vehicles — <strong>most affordable</strong>, <strong>fully flexible</strong> and planned end-to-end.</p>
+
+    <form class="finder" id="finder" aria-label="Quick trip finder">
+      <label><span><i class="fa-solid fa-suitcase-rolling"></i> Trip type</span>
+        <select id="finderType"><option value="all">Any trip</option></select></label>
+      <label><span><i class="fa-solid fa-earth-asia"></i> Where</span>
+        <select id="finderScope"><option value="all">Anywhere</option></select></label>
+      <label><span><i class="fa-solid fa-wallet"></i> Budget up to</span>
+        <select id="finderBudget"></select></label>
+      <button class="btn btn--primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Find Packages</button>
+    </form>
+
+    <ul class="trust">
+      <li><i class="fa-solid fa-indian-rupee-sign"></i> Most Affordable</li>
+      <li><i class="fa-solid fa-sliders"></i> Flexible Plans</li>
+      <li><i class="fa-solid fa-route"></i> End-to-End</li>
+      <li><i class="fa-solid fa-headset"></i> 24×7 Support</li>
+    </ul>
+  </div>
+  <div class="hero__dots" id="heroDots"></div>
+  <a href="#places" class="hero__scroll" aria-label="Scroll down"><i class="fa-solid fa-chevron-down"></i></a>
+</section>
+
+<!-- ================= MOST EXPERIENCED PLACES (LOOP) ================= -->
+<section class="section loop-section" id="places">
+  <div class="container center reveal">
+    <span class="eyebrow">Where we go again &amp; again</span>
+    <h2 class="title">Our Most Experienced Places</h2>
+    <p class="lead">The destinations our travellers love the most — and that we know inside out.</p>
+  </div>
+  <div class="marquee" id="marquee"><div class="marquee__track" id="marqueeTrack"></div></div>
+</section>
+
+<!-- ================= SCOPE TABS ================= -->
+<section class="section section--tint" id="scope">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow">Near or far</span>
+      <h2 class="title">From Your State to Across the Seas</h2>
+    </div>
+    <div class="tabs reveal" role="tablist" id="scopeTabs"></div>
+    <p class="scope-desc center" id="scopeDesc"></p>
+    <div class="grid grid--3" id="scopePlaces"></div>
+  </div>
+</section>
+
+<!-- ================= THEMES ================= -->
+<section class="section" id="themes">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow">Pick a mood</span>
+      <h2 class="title">Explore by Theme</h2>
+      <p class="lead">Culture, mountains, romance or a wild night out. Pick the feeling and we'll plan the trip.</p>
+    </div>
+    <div class="grid grid--4" id="themeGrid"></div>
+  </div>
+</section>
+
+<!-- ================= TRIP TYPES ================= -->
+<section class="section section--tint" id="trips">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow">Every kind of traveller</span>
+      <h2 class="title">Trips Made for Who You Travel With</h2>
+    </div>
+    <div class="grid grid--4" id="tripGrid"></div>
+  </div>
+</section>
+
+<!-- ================= BUDGET METER ================= -->
+<section class="section budget" id="budget">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow">Your budget, your rules</span>
+      <h2 class="title">Slide the Budget Meter &amp; Watch Your Trips Pop Up</h2>
+      <p class="lead">Every package is flexible. Pick your budget, then talk to us to adjust anything.</p>
+    </div>
+
+    <div class="meter reveal">
+      <div class="meter__gauge">
+        <svg viewBox="0 0 200 120" aria-hidden="true">
+          <defs><linearGradient id="gaugeGrad" x1="0" x2="1"><stop offset="0" stop-color="#22c55e"/><stop offset=".5" stop-color="#f59e0b"/><stop offset="1" stop-color="#f72585"/></linearGradient></defs>
+          <path d="M20 110 A80 80 0 0 1 180 110" class="gauge__bg"/>
+          <path d="M20 110 A80 80 0 0 1 180 110" class="gauge__fg" id="gaugeArc"/>
+          <line x1="100" y1="110" x2="100" y2="42" class="gauge__needle" id="gaugeNeedle"/>
+          <circle cx="100" cy="110" r="7" class="gauge__hub"/>
+        </svg>
+        <div class="meter__value"><small>Up to</small><output id="budgetOut">₹60,000</output><span id="budgetMood">Comfort explorer ✨</span></div>
+      </div>
+      <div class="meter__controls">
+        <label for="budgetRange" class="sr-only">Budget</label>
+        <input type="range" id="budgetRange" class="range">
+        <div class="range__labels"><span id="rangeMin"></span><span id="rangeMax"></span></div>
+        <div class="filters">
+          <label>Trip type<select id="fType"><option value="all">All trips</option></select></label>
+          <label>Where<select id="fScope"><option value="all">Anywhere</option></select></label>
+          <label>Flexibility<select id="fFlex"><option value="all">Any</option><option>Fully Flexible</option><option>Partially Flexible</option></select></label>
+          <label>Sort<select id="fSort"><option value="match">Best match</option><option value="low">Price: low → high</option><option value="high">Price: high → low</option><option value="rating">Top rated</option></select></label>
+        </div>
+        <p class="meter__count"><strong id="matchCount">0</strong> packages fit your budget</p>
+      </div>
+    </div>
+
+    <div class="grid grid--3 packages" id="packageGrid" aria-live="polite"></div>
+    <p class="empty center" id="emptyMsg" hidden>No package at this budget yet. <a href="#enquire">Tell us your budget</a> and we'll build one just for you!</p>
+  </div>
+</section>
+
+<!-- ================= PROMO ================= -->
+<section class="promo">
+  <div class="container promo__inner reveal">
+    <div><h3><i class="fa-solid fa-gift"></i> <span id="promoText">Use this code on your first booking and save</span> <span id="promoDisc">__%</span></h3>
+      <p>Most affordable prices, plus an extra welcome gift from Tiptangle.</p></div>
+    <button class="promo__code" id="promoBtn" type="button"><span id="promoCode">______</span> <i class="fa-regular fa-copy"></i></button>
+  </div>
+</section>
+
+<!-- ================= FLEET ================= -->
+<section class="section" id="fleet">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow">Many ways to travel</span>
+      <h2 class="title">Our Fleet &amp; Transport Options</h2>
+      <p class="lead">We own our vehicles and partner with airlines, railways and cruise lines. Mix any of them in one trip.</p>
+    </div>
+    <div class="grid grid--4" id="fleetGrid"></div>
+  </div>
+</section>
+
+<!-- ================= JOURNEY ================= -->
+<section class="section section--tint" id="journey">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow">How we take care of you</span>
+      <h2 class="title">Your Journey With Tiptangle</h2>
+      <p class="lead">From your first message to the moment you're home, a Tiptangle expert is with you at every step.</p>
+    </div>
+    <ol class="timeline" id="timeline"></ol>
+  </div>
+</section>
+
+<!-- ================= STEPS ================= -->
+<section class="section" id="steps">
+  <div class="container">
+    <div class="center reveal"><span class="eyebrow">Simple &amp; quick</span><h2 class="title">How It Works</h2></div>
+    <div class="steps" id="stepsGrid"></div>
+  </div>
+</section>
+
+<!-- ================= ADVANTAGES ================= -->
+<section class="section section--dark" id="why">
+  <div class="container">
+    <div class="center reveal"><span class="eyebrow eyebrow--light">Why travellers choose us</span><h2 class="title title--light">Most Affordable. Fully Flexible. Always Safe.</h2></div>
+    <div class="grid grid--3" id="advGrid"></div>
+  </div>
+</section>
+
+<!-- ================= MILESTONES ================= -->
+<section class="section" id="milestones">
+  <div class="container">
+    <div class="stats" id="stats"></div>
+    <div class="center reveal"><span class="eyebrow">Proud moments</span><h2 class="title">Milestones We've Achieved</h2></div>
+    <div class="grid grid--4" id="milestoneGrid"></div>
+  </div>
+</section>
+
+<!-- ================= BLOG + FOOD ================= -->
+<section class="section section--tint" id="blog">
+  <div class="container">
+    <div class="center reveal"><span class="eyebrow">Stories &amp; tips</span><h2 class="title">Travel Blog</h2></div>
+    <div class="grid grid--3" id="blogGrid"></div>
+    <div class="center reveal mt"><span class="eyebrow">Taste the journey</span><h2 class="title">Food &amp; Beverage Guide</h2></div>
+    <div class="grid grid--3" id="foodGrid"></div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS + RATE ================= -->
+<section class="section" id="reviews">
+  <div class="container reviews">
+    <div class="reveal">
+      <span class="eyebrow">Happy travellers</span>
+      <h2 class="title">What Our Travellers Say</h2>
+      <div class="slider" id="testi"></div>
+      <div class="slider__nav"><button type="button" id="tPrev" aria-label="Previous review"><i class="fa-solid fa-arrow-left"></i></button><button type="button" id="tNext" aria-label="Next review"><i class="fa-solid fa-arrow-right"></i></button></div>
+    </div>
+    <div class="rate reveal">
+      <h3>Rate Your Experience</h3>
+      <p>How do you feel about Tiptangle so far?</p>
+      <div class="stars" id="rateStars" role="radiogroup" aria-label="Your rating"></div>
+      <p class="rate__label" id="rateLabel">Tap a star</p>
+      <div class="rate__avg"><strong id="rateAvg">4.9</strong><span>/ 5 overall · <span id="rateCount">0</span> ratings</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ENQUIRY ================= -->
+<section class="section section--tint" id="enquire">
+  <div class="container enquire">
+    <div class="enquire__pitch reveal">
+      <span class="eyebrow">Don't wait, wander</span>
+      <h2 class="title">Get Your Free Custom Trip Plan</h2>
+      <p class="lead">Tell us a little and a travel expert will send you a personalised, flexible catalog. There's no obligation and nothing to regret.</p>
+      <ul class="ticks">
+        <li><i class="fa-solid fa-circle-check"></i> Most affordable price promise</li>
+        <li><i class="fa-solid fa-circle-check"></i> Fully &amp; partially flexible packages</li>
+        <li><i class="fa-solid fa-circle-check"></i> Our own vehicles, multi-mode transport</li>
+        <li><i class="fa-solid fa-circle-check"></i> End-to-end service · You're in safe hands</li>
+      </ul>
+    </div>
+    <form class="form reveal" id="enquiryForm" name="enquiry" method="POST" data-netlify="true" novalidate>
+      <input type="hidden" name="form-name" value="enquiry">
+      <div class="form__row">
+        <label>Your name<input name="name" required autocomplete="name" placeholder="Full name"></label>
+        <label>Phone / WhatsApp<input name="phone" required type="tel" autocomplete="tel" placeholder="+91 ..." pattern="[0-9+\s-]{8,}"></label>
+      </div>
+      <div class="form__row">
+        <label>Trip type<select name="tripType" id="formType"></select></label>
+        <label>Where<select name="scope" id="formScope"></select></label>
+      </div>
+      <div class="form__row">
+        <label>Travel date<input name="date" type="date"></label>
+        <label>Travellers<input name="travellers" type="number" min="1" value="2"></label>
+      </div>
+      <label>Budget (<span id="formBudgetOut">₹60,000</span>)<input name="budget" type="range" id="formBudget" class="range"></label>
+      <label>Package / message<textarea name="message" id="formMsg" rows="3" placeholder="Tell us your dream trip..."></textarea></label>
+      <button class="btn btn--primary btn--block" type="submit"><i class="fa-solid fa-paper-plane"></i> Get My Free Plan</button>
+      <p class="form__note"><i class="fa-solid fa-lock"></i> Your details are safe with us. We never spam.</p>
+      <div class="form__ok" id="formOk" hidden><i class="fa-solid fa-circle-check"></i><h3>Thank you! 🎉</h3><p>Your trip plan is on its way. You're in safe hands now.</p></div>
+    </form>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section" id="contact">
+  <div class="container contact">
+    <div class="contact__info reveal">
+      <span class="eyebrow">Visit or call us</span>
+      <h2 class="title">Find Tiptangle</h2>
+      <ul class="contact__list">
+        <li><i class="fa-solid fa-location-dot"></i><span data-bind="agency.address"></span></li>
+        <li><i class="fa-solid fa-phone"></i><a data-bind="agency.phone" data-href="tel"></a></li>
+        <li><i class="fa-solid fa-envelope"></i><a data-bind="agency.email" data-href="mailto"></a></li>
+        <li><i class="fa-regular fa-clock"></i><span data-bind="agency.hours"></span></li>
+      </ul>
+      <div class="social" id="social"></div>
+    </div>
+    <div class="contact__map reveal"><iframe id="mapFrame" title="Tiptangle location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <a href="#home" class="brand brand--light"><img src="assets/logo.svg" alt="" class="brand__logo" data-bind-src="agency.logo"><span class="brand__name" data-bind="agency.name">Tiptangle</span></a>
+      <p data-bind="agency.tagline"></p>
+    </div>
+    <div><h4>Explore</h4><a href="#places">Destinations</a><a href="#budget">Packages</a><a href="#trips">Trip Types</a><a href="#fleet">Fleet</a></div>
+    <div><h4>Company</h4><a href="#journey">Your Journey</a><a href="#milestones">Milestones</a><a href="#blog">Blog</a><a href="#contact">Contact</a></div>
+    <div><h4>Promise</h4><p>Most Affordable · Flexible · End-to-End · Safe Hands</p></div>
+  </div>
+  <p class="footer__copy">© <span id="year"></span> <span data-bind="agency.name">Tiptangle</span>. All rights reserved.</p>
+</footer>
+
+<!-- ================= FLOATING ================= -->
+<a class="float float--wa" id="floatWa" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<a class="float float--call" id="floatCall" href="#" aria-label="Call us"><i class="fa-solid fa-phone"></i></a>
+<button class="float float--top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+<div class="toast" id="toast" role="status"><i class="fa-solid fa-shield-heart"></i><span></span></div>
+
+<!-- Package modal -->
+<div class="modal" id="pkgModal" role="dialog" aria-modal="true" aria-labelledby="mTitle" hidden>
+  <div class="modal__box">
+    <button class="modal__close" data-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="modal__hero" id="mHero"><div><span class="chip" id="mFlex"></span><h3 id="mTitle"></h3><p id="mMeta"></p></div></div>
+    <div class="modal__tabs" role="tablist" id="mTabs"></div>
+    <div class="modal__body" id="mBody"></div>
+    <div class="modal__foot"><strong id="mPrice"></strong><button class="btn btn--primary" id="mBook" type="button">Customise &amp; Negotiate <i class="fa-solid fa-arrow-right"></i></button></div>
+  </div>
+</div>
+
+<!-- Exit intent modal -->
+<div class="modal" id="exitModal" role="dialog" aria-modal="true" aria-labelledby="exitTitle" hidden>
+  <div class="modal__box modal__box--sm center">
+    <button class="modal__close" data-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="exit__icon">✈️</div>
+    <h3 id="exitTitle">Wait! Your dream trip is one click away</h3>
+    <p>Get a <strong>free custom plan</strong> in your budget. Fully flexible, most affordable, and you're in safe hands.</p>
+    <a href="#enquire" class="btn btn--primary" data-close>Get My Free Plan</a>
+  </div>
+</div>
+
+<canvas id="confetti" aria-hidden="true"></canvas>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
